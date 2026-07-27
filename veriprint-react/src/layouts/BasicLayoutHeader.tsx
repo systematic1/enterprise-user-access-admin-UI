@@ -21,7 +21,6 @@ function BasicLayoutHeader(): ReactElement {
         <span className="col-1 text-end pr-2 lt-gray">
           <span className="fa fa-stopwatch" title="Show Idle Remaining Time"></span>
         </span>
-        <span title="Toggle Dark Theme" className="fa fa-circle-half-stroke pr-1"></span>
         <span className="envir-text">
           { environment.current }
         </span>

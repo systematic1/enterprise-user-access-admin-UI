@@ -36,6 +36,7 @@ function AppStatusMonitor(): ReactElement {
   }
 
   function resetEventTimer(): void {
+    // Simulation of systems going down randomly
     const randTime = Math.random() * 30000; // within 30 secs
     const randTime2 = Math.random() * 100;
 

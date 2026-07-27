@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState, type PropsWithChildren } from "react";
-import type { navigationSection } from "../components/models/navigationSection";
+import type { navigationSection } from "../layouts/models/navigationSection";
 import { navigationService } from "../services/navigationService";
 
 const NavigationContext = createContext<navigationSection[]>([]);

@@ -19,18 +19,17 @@ export const authService = {
     if (cached.length)
       return new Promise<appFunctionPermission[]>((res, _) => res(cached));
     else {
-      return fetch(AppUrls.GetUserPermittedAppFunctions)
-        .then<appFunctionPermission[]>(response => response.json())
+      return authService.getUserPermittedAppFunctionsFor('.')
         .then<appFunctionPermission[]>(json => {
-            authService.updateFunctionCacheData(json);
-            return json;
+          authService.updateFunctionCacheData(json);
+          return json;
         }
       );
     }
   },
 
   getUserPermittedAppFunctionsFor: (userId: string) : Promise<appFunctionPermission[]> => {
-    return fetch(AppUrls.GetUserPermittedAppFunctionsFor.replace('{id}', userId))
+    return fetch(AppUrls.GetUserPermittedAppFunctionsFor.replace('{userId}', userId))
       .then<appFunctionPermission[]>(response => response.json());
   },
 

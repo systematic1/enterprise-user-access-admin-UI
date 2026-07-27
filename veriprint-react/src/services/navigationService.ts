@@ -25,10 +25,6 @@ export const navigationService = {
       .then();
   },
 
-  updateMenuItemSortOrder: (menuItemId: number, sequence: number) : void => {
-     
-  },
-
   deleteMenuItem: (menuItemId: number) : void => {
     const url = AppUrls.DeleteMenuItem.replace('{menuItemId}', menuItemId.toString());
     fetch(url, { method: 'DELETE' });

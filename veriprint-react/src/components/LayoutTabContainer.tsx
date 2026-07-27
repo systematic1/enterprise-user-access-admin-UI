@@ -28,9 +28,7 @@ function LayoutTabContainer(props: LayoutTabContainerProps) : ReactElement {
 
   return (
     <TabsContext.Provider value={containerFuncs}>
-
-        {children}
-
+      {children}
     </TabsContext.Provider>
   );
 }
